@@ -1,0 +1,32 @@
+@host = http://localhost:3000
+@todoApi = ${host}/todos
+
+### Get all Todos
+GET {{todoApi}}
+
+### Get a specific Todo by ID
+GET {{todoApi}}/1
+
+### Add a new Todo
+POST {{todoApi}}
+Content-Type: application/json
+
+{
+  "title": "New Todo",
+  "description": "Description of the new Todo",
+  "completed": false
+}
+
+### Update a Todo
+PUT {{todoApi}}/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Updated Todo Title",
+  "description": "Updated description",
+  "completed": true
+}
+
+### Delete a Todo
+DELETE {{todoApi}}/1

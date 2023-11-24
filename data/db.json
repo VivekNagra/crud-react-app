@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Grocery Shopping",
+      "description": "Buy milk, bread, and eggs from the supermarket.",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Workout",
+      "description": "Go for a 30-minute run in the park.",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Read a Book",
+      "description": "Read 'The Great Gatsby' for 1 hour.",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Clean the House",
+      "description": "Vacuum the living room and clean the bathroom.",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Call Mom",
+      "description": "Call Mom to check on her.",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Fix the Bike",
+      "description": "Repair the punctured tire of the bicycle.",
+      "completed": false
+    }
+  ]
+}
