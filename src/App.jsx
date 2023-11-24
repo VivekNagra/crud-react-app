@@ -67,8 +67,12 @@ function App() {
     return (
         <div className="container mt-4"> 
             <h1 className="text-center mb-4">Todo List</h1>
-            <TodoForm blankTodo={blankTodo} todoToEdit={todoToEdit} mutateTodo={mutateTodo}/>
-            <TodoList todos={todos} deleteTodoById={deleteTodoById} editTodo={editTodo}/>
+            <div>
+              <TodoForm blankTodo={blankTodo} todoToEdit={todoToEdit} mutateTodo={mutateTodo}/>
+            </div>
+            <div>
+              <TodoList todos={todos} deleteTodoById={deleteTodoById} editTodo={editTodo}/>
+            </div>
         </div>
     )
 }

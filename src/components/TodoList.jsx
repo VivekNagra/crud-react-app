@@ -20,8 +20,8 @@ function TodoList({ todos, deleteTodoById, editTodo }) {
                             <td>{todo.description}</td>
                             <td>{todo.completed ? 'Yes' : 'No'}</td>
                             <td>
-                                <button onClick={() => editTodo(todo)}>Edit</button>
-                                <button onClick={() => deleteTodoById(todo.id)}>Delete</button>
+                                <button type="button" className="btn btn-primary" onClick={() => editTodo(todo)}>Edit</button>
+                                <button type="button" className="btn btn-danger" onClick={() => deleteTodoById(todo.id)}>Delete</button>
                             </td>
                         </tr>
                     ))}

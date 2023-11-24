@@ -30,29 +30,39 @@ function TodoForm({ blankTodo, todoToEdit, mutateTodo }) {
     }
 
     return (
-        <div>
-            <h1>Add/Edit Todo</h1>
+        <div className="container mt-3">
+            <h1 className="mb-3">Add/Edit Todo</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="id">ID</label>
-                <input id="id" type="number" readOnly placeholder="id" value={todo.id} />
-
-                <label htmlFor="title">Title</label>
-                <input id="title" type="text" placeholder="title" value={todo.title} onChange={handleChange} />
-
-                <label htmlFor="description">Description</label>
-                <textarea id="description" placeholder="description" value={todo.description} onChange={handleChange} />
-
-                <label htmlFor="completed">Completed</label>
-                <select id="completed" value={todo.completed.toString()} onChange={handleChange} >
-                    <option value="false" selected="selected">No</option>
-                    <option value="true">Yes</option>
-                </select>
-
-                <button type="submit">Save Todo</button>
-                <button type="button" onClick={(e) => {
-                    e.preventDefault();
-                    setTodo(blankTodo);
-                }}>Reset</button>
+                <div className="row mb-3">
+                    <div className="col-md-1">
+                        <label htmlFor="id" className="form-label">ID</label>
+                        <input id="id" type="text" className="form-control" readOnly value={todo.id} />
+                    </div>
+                </div>
+                <div className="row mb-3">
+                    <div className="col-md-6">
+                        <label htmlFor="title" className="form-label">Title</label>
+                        <input id="title" type="text" className="form-control" placeholder="Enter title" value={todo.title} onChange={handleChange} />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="completed" className="form-label">Completed</label>
+                        <select id="completed" className="form-select" value={todo.completed.toString()} onChange={handleChange}>
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <textarea id="description" className="form-control" placeholder="Enter description" rows="3" value={todo.description} onChange={handleChange}></textarea>
+                </div>
+                <div className="mb-3">
+                    <button className="btn btn-success me-2" type="submit">Save Todo</button>
+                    <button type="button" className="btn btn-secondary" onClick={(e) => {
+                        e.preventDefault();
+                        setTodo(blankTodo);
+                    }}>Reset</button>
+                </div>
             </form>
         </div>
     );
